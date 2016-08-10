@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>Login</title>
+<style>
+body
+{
+background-color:#ABCDEF;
+}
+</style>
+<script>
+function validate()
+{
+var name=document.getElementById("id1").value;
+var name_reg=/^[a-zA-Z][a-zA-Z0-9_]*$/
+var name_res=name_reg.test(name);
+if(!name_res)
+alert('Not valid UserID');
+}
+</script>
+</head>
+<body>
+<center>
+<br>
+<h1 style="color:#98AB34">LOGIN : </h1>
+<br><br>
+<form action="UserAuthentication.jsp" method="get">
+<table cellpadding=10px>
+<tr>
+<td>Username: </td>
+<td><input type="text" id="id1" name="username" placeholder="Enter user id"></td>
+</tr>
+<tr>
+<td>Password: </td>
+<td><input type="password" id="id1" name="pwd" placeholder="Enter password"></td>
+</tr>
+</table>
+<br>
+<input type="submit" onclick="validate()" value="login">
+<input type="reset" value="reset">
+</form>
+<b>not yet registered?</b><a href="registration.html">click here</a>
+</center>
+</body>
+</html>
